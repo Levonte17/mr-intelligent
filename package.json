@@ -1,10 +1,10 @@
 {
   "name": "intellegent",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +15,15 @@
     "express": "^4.18.2",
     "gitignore": "^0.7.0",
     "openai": "^3.1.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Levonte17/mr-intelligent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Levonte17/mr-intelligent/issues"
+  },
+  "homepage": "https://github.com/Levonte17/mr-intelligent#readme",
+  "description": ""
 }
