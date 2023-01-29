@@ -1,13 +1,16 @@
 //IMPORT
 const OpenAI = require('openai');
 const { OpenAIApi, Configuration } = OpenAI;
+
 //DEPENDENCIES
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const logger = require('morgan');
 
 //CONFIG
 require('dotenv').config();
+
 //INITIALIZE APP
 const app = express();
 const {
@@ -24,8 +27,13 @@ const openai = new OpenAIApi(configuration);
 //MIDDLEWARE
 app.use(bodyParser.json());
 app.use(cors());
+app.use(logger('dev'));
 
 //ROUTES
+app.get('/', (req, res) => {
+    res.send('WELCOME TO THE DIGITAL INVESTORS HUB');
+});
+
 app.post('/', async (req, res) => {
     const { message } = req.body;
     const response = await openai.createCompletion({

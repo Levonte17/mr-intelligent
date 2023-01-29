@@ -14,9 +14,9 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "gitignore": "^0.7.0",
+    "morgan": "^1.10.0",
     "openai": "^3.1.0"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Levonte17/mr-intelligent.git"
