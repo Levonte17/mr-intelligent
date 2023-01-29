@@ -11,13 +11,13 @@ require('dotenv').config();
 //INITIALIZE APP
 const app = express();
 const {
-    PORT = 4007, API_KEY, ORG
+    PORT = 4007, organization, apiKey
 } = process.env;
 
 //INITIALIZE OPENAI
 const configuration = new Configuration({
-    organization: ORG,
-    apiKey: API_KEY,
+    organization: organization,
+    apiKey: apiKey,
 });
 const openai = new OpenAIApi(configuration);
 
