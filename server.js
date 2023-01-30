@@ -14,7 +14,7 @@ require('dotenv').config();
 //INITIALIZE APP
 const app = express();
 const {
-    PORT = 4007, apiKey, message = "Hello, I am LeVonte Larry. How can I help you?"
+    PORT = 4007,
 } = process.env;
 
 //INITIALIZE OPENAI
