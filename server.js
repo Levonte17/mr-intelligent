@@ -14,14 +14,13 @@ require('dotenv').config();
 //INITIALIZE APP
 const app = express();
 const {
-    PORT = 4007,
+    PORT = 4007, apiKey, message = "Hello, I am LeVonte Larry. How can I help you?"
 } = process.env;
 
 //INITIALIZE OPENAI
 const configuration = new Configuration({
-    organization:"org-nUd7ZrgrHTk6IpCeguybI2dV",//jendjnjbewjibdnjnew dbdn bjked jknbkkjbxjkemcjnn
-apiKey:"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"//jendjnjbewjibdnjnew/ dbdn bjk//ed jknb
-//wecdkb jbdcjkjkhbdm hnbjsdn mhqdsx //hnjbasxnkasbxjksnx ajhsbx hjq/sdx bn asjch//b qshd hjasbcxhqs dchj
+    organization:"org-nUd7ZrgrHTk6IpCeguybI2dV",
+apiKey: process.env.apiKey,
 });
 const openai = new OpenAIApi(configuration);
 
