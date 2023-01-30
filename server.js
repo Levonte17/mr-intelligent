@@ -14,13 +14,14 @@ require('dotenv').config();
 //INITIALIZE APP
 const app = express();
 const {
-    PORT = 4007, organization, apiKey
+    PORT = 4007,
 } = process.env;
 
 //INITIALIZE OPENAI
 const configuration = new Configuration({
-    organization: organization,
-    apiKey: apiKey,
+    organization:"org-nUd7ZrgrHTk6IpCeguybI2dV",//jendjnjbewjibdnjnew dbdn bjked jknbkkjbxjkemcjnn
+apiKey:"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"//jendjnjbewjibdnjnew/ dbdn bjk//ed jknb
+//wecdkb jbdcjkjkhbdm hnbjsdn mhqdsx //hnjbasxnkasbxjksnx ajhsbx hjq/sdx bn asjch//b qshd hjasbcxhqs dchj
 });
 const openai = new OpenAIApi(configuration);
 
@@ -31,7 +32,7 @@ app.use(logger('dev'));
 
 //ROUTES
 app.get('/', (req, res) => {
-    res.send('WELCOME TO THE DIGITAL INVESTORS HUB');
+    res.json({message: {message}});
 });
 
 app.post('/', async (req, res) => {
@@ -43,14 +44,14 @@ app.post('/', async (req, res) => {
     LeVonte Larry:
     How can I help you?
     Person: 
-    I want somre motivation.
+    I want some motivation.
     LeVonte Larry:
     You Are Everything You Believe Yourself To Be.
     Believe In Yourself.
     Person: 
     ${message}?
     LeVonte Larry:`,
-        "max_tokens": 500,
+        "max_tokens": 800,
         "temperature": 0,
 });
     console.log(response.data)
